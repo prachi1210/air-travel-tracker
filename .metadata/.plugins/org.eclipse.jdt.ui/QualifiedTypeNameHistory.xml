@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<qualifiedTypeNameHistroy>
+<fullyQualifiedTypeName name="de.fhpotsdam.unfolding.marker.SimplePointMarker"/>
+<fullyQualifiedTypeName name="de.fhpotsdam.unfolding.geo.Location"/>
+<fullyQualifiedTypeName name="de.fhpotsdam.unfolding.utils.MapPosition"/>
+<fullyQualifiedTypeName name="de.fhpotsdam.unfolding.marker.SimpleLinesMarker"/>
+<fullyQualifiedTypeName name="de.fhpotsdam.unfolding.utils.ScreenPosition"/>
+<fullyQualifiedTypeName name="processing.core.PApplet"/>
+<fullyQualifiedTypeName name="processing.core.PFont"/>
+<fullyQualifiedTypeName name="processing.core.PImage"/>
+<fullyQualifiedTypeName name="de.fhpotsdam.unfolding.UnfoldingMap"/>
+</qualifiedTypeNameHistroy>

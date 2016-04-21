@@ -1,0 +1,201 @@
+!SESSION 2016-04-05 09:10:12.481 -----------------------------------------------
+eclipse.buildId=4.4.0.I20140606-1215
+java.version=1.8.0_45
+java.vendor=Oracle Corporation
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=en_IN
+Framework arguments:  -product org.eclipse.epp.package.java.product
+Command-line arguments:  -os win32 -ws win32 -arch x86_64 -product org.eclipse.epp.package.java.product
+
+!ENTRY org.eclipse.egit.ui 2 0 2016-04-05 09:11:09.737
+!MESSAGE Warning: EGit couldn't detect the installation path "gitPrefix" of native Git. Hence EGit can't respect system level
+Git settings which might be configured in ${gitPrefix}/etc/gitconfig under the native Git installation directory.
+The most important of these settings is core.autocrlf. Git for Windows by default sets this parameter to true in
+this system level configuration. The Git installation location can be configured on the
+Team > Git > Configuration preference page's 'System Settings' tab.
+This warning can be switched off on the Team > Git > Confirmations and Warnings preference page.
+
+!ENTRY org.eclipse.jdt.core 4 0 2016-04-05 09:19:07.141
+!MESSAGE Invalid ZIP archive: C:\Users\raj.singh15\Desktop\OOP Crash\UCSDUnfoldingMaps\lib\core.jar
+
+!ENTRY org.eclipse.jdt.core 4 0 2016-04-05 09:19:07.150
+!MESSAGE Invalid ZIP archive: C:\Users\raj.singh15\Desktop\OOP Crash\UCSDUnfoldingMaps\lib\unfolding.0.9.7-uscd.jar
+
+!ENTRY org.eclipse.jdt.core 4 0 2016-04-05 09:19:46.686
+!MESSAGE Invalid ZIP archive: C:\Users\raj.singh15\Desktop\OOP Crash\UCSDUnfoldingMaps\lib\gluegen-rt.jar
+
+!ENTRY org.eclipse.jdt.core 4 0 2016-04-05 09:19:46.686
+!MESSAGE Invalid ZIP archive: C:\Users\raj.singh15\Desktop\OOP Crash\UCSDUnfoldingMaps\lib\gluegen-rt-natives-linux-amd64.jar
+
+!ENTRY org.eclipse.jdt.core 4 0 2016-04-05 09:19:46.701
+!MESSAGE Invalid ZIP archive: C:\Users\raj.singh15\Desktop\OOP Crash\UCSDUnfoldingMaps\lib\gluegen-rt-natives-linux-armv6hf.jar
+
+!ENTRY org.eclipse.jdt.core 4 0 2016-04-05 09:19:46.701
+!MESSAGE Invalid ZIP archive: C:\Users\raj.singh15\Desktop\OOP Crash\UCSDUnfoldingMaps\lib\gluegen-rt-natives-linux-i586.jar
+
+!ENTRY org.eclipse.jdt.core 4 0 2016-04-05 09:19:46.701
+!MESSAGE Invalid ZIP archive: C:\Users\raj.singh15\Desktop\OOP Crash\UCSDUnfoldingMaps\lib\gluegen-rt-natives-macosx-universal.jar
+
+!ENTRY org.eclipse.jdt.core 4 0 2016-04-05 09:19:46.717
+!MESSAGE Invalid ZIP archive: C:\Users\raj.singh15\Desktop\OOP Crash\UCSDUnfoldingMaps\lib\gluegen-rt-natives-windows-amd64.jar
+
+!ENTRY org.eclipse.jdt.core 4 0 2016-04-05 09:19:46.717
+!MESSAGE Invalid ZIP archive: C:\Users\raj.singh15\Desktop\OOP Crash\UCSDUnfoldingMaps\lib\gluegen-rt-natives-windows-i586.jar
+
+!ENTRY org.eclipse.jdt.core 4 0 2016-04-05 09:19:46.733
+!MESSAGE Invalid ZIP archive: C:\Users\raj.singh15\Desktop\OOP Crash\UCSDUnfoldingMaps\lib\jogl-all.jar
+
+!ENTRY org.eclipse.jdt.core 4 0 2016-04-05 09:19:46.733
+!MESSAGE Invalid ZIP archive: C:\Users\raj.singh15\Desktop\OOP Crash\UCSDUnfoldingMaps\lib\jogl-all-natives-linux-amd64.jar
+
+!ENTRY org.eclipse.jdt.core 4 0 2016-04-05 09:19:46.733
+!MESSAGE Invalid ZIP archive: C:\Users\raj.singh15\Desktop\OOP Crash\UCSDUnfoldingMaps\lib\jogl-all-natives-linux-armv6hf.jar
+
+!ENTRY org.eclipse.jdt.core 4 0 2016-04-05 09:19:46.751
+!MESSAGE Invalid ZIP archive: C:\Users\raj.singh15\Desktop\OOP Crash\UCSDUnfoldingMaps\lib\jogl-all-natives-linux-i586.jar
+
+!ENTRY org.eclipse.jdt.core 4 0 2016-04-05 09:19:46.757
+!MESSAGE Invalid ZIP archive: C:\Users\raj.singh15\Desktop\OOP Crash\UCSDUnfoldingMaps\lib\jogl-all-natives-macosx-universal.jar
+
+!ENTRY org.eclipse.jdt.core 4 0 2016-04-05 09:19:46.762
+!MESSAGE Invalid ZIP archive: C:\Users\raj.singh15\Desktop\OOP Crash\UCSDUnfoldingMaps\lib\jogl-all-natives-windows-amd64.jar
+
+!ENTRY org.eclipse.jdt.core 4 0 2016-04-05 09:19:46.768
+!MESSAGE Invalid ZIP archive: C:\Users\raj.singh15\Desktop\OOP Crash\UCSDUnfoldingMaps\lib\jogl-all-natives-windows-i586.jar
+
+!ENTRY org.eclipse.jdt.core 4 0 2016-04-05 09:19:46.772
+!MESSAGE Invalid ZIP archive: C:\Users\raj.singh15\Desktop\OOP Crash\UCSDUnfoldingMaps\lib\json4processing.jar
+
+!ENTRY org.eclipse.jdt.core 4 0 2016-04-05 09:19:46.778
+!MESSAGE Invalid ZIP archive: C:\Users\raj.singh15\Desktop\OOP Crash\UCSDUnfoldingMaps\lib\libTUIO.jar
+
+!ENTRY org.eclipse.jdt.core 4 0 2016-04-05 09:19:46.782
+!MESSAGE Invalid ZIP archive: C:\Users\raj.singh15\Desktop\OOP Crash\UCSDUnfoldingMaps\lib\log4j-1.2.15.jar
+
+!ENTRY org.eclipse.jdt.core 4 0 2016-04-05 09:19:46.786
+!MESSAGE Invalid ZIP archive: C:\Users\raj.singh15\Desktop\OOP Crash\UCSDUnfoldingMaps\lib\sqlite-jdbc-3.7.2.jar
+
+!ENTRY org.eclipse.jdt.launching 4 150 2016-04-05 09:20:47.605
+!MESSAGE The archive: C:/Users/raj.singh15/Desktop/OOP Crash/UCSDUnfoldingMaps/lib/core.jar which is referenced by the classpath, does not exist.
+!SESSION 2016-04-05 11:30:37.095 -----------------------------------------------
+eclipse.buildId=4.4.0.I20140606-1215
+java.version=1.8.0_45
+java.vendor=Oracle Corporation
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=en_IN
+Framework arguments:  -product org.eclipse.epp.package.java.product
+Command-line arguments:  -os win32 -ws win32 -arch x86_64 -product org.eclipse.epp.package.java.product
+
+!ENTRY org.eclipse.core.resources 2 10035 2016-04-05 11:31:02.743
+!MESSAGE The workspace exited with unsaved changes in the previous session; refreshing workspace to recover changes.
+
+!ENTRY org.eclipse.egit.ui 2 0 2016-04-05 11:31:13.185
+!MESSAGE Warning: EGit couldn't detect the installation path "gitPrefix" of native Git. Hence EGit can't respect system level
+Git settings which might be configured in ${gitPrefix}/etc/gitconfig under the native Git installation directory.
+The most important of these settings is core.autocrlf. Git for Windows by default sets this parameter to true in
+this system level configuration. The Git installation location can be configured on the
+Team > Git > Configuration preference page's 'System Settings' tab.
+This warning can be switched off on the Team > Git > Confirmations and Warnings preference page.
+!SESSION 2016-04-12 00:23:37.970 -----------------------------------------------
+eclipse.buildId=4.4.0.I20140606-1215
+java.version=1.8.0_45
+java.vendor=Oracle Corporation
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=en_IN
+Framework arguments:  -product org.eclipse.epp.package.java.product
+Command-line arguments:  -os win32 -ws win32 -arch x86_64 -product org.eclipse.epp.package.java.product
+
+!ENTRY org.eclipse.egit.ui 2 0 2016-04-12 00:24:03.872
+!MESSAGE Warning: EGit couldn't detect the installation path "gitPrefix" of native Git. Hence EGit can't respect system level
+Git settings which might be configured in ${gitPrefix}/etc/gitconfig under the native Git installation directory.
+The most important of these settings is core.autocrlf. Git for Windows by default sets this parameter to true in
+this system level configuration. The Git installation location can be configured on the
+Team > Git > Configuration preference page's 'System Settings' tab.
+This warning can be switched off on the Team > Git > Confirmations and Warnings preference page.
+!SESSION 2016-04-18 17:43:06.319 -----------------------------------------------
+eclipse.buildId=4.4.0.I20140606-1215
+java.version=1.8.0_45
+java.vendor=Oracle Corporation
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=en_IN
+Framework arguments:  -product org.eclipse.epp.package.java.product
+Command-line arguments:  -os win32 -ws win32 -arch x86_64 -product org.eclipse.epp.package.java.product
+
+!ENTRY org.eclipse.egit.ui 2 0 2016-04-18 17:43:50.137
+!MESSAGE Warning: EGit couldn't detect the installation path "gitPrefix" of native Git. Hence EGit can't respect system level
+Git settings which might be configured in ${gitPrefix}/etc/gitconfig under the native Git installation directory.
+The most important of these settings is core.autocrlf. Git for Windows by default sets this parameter to true in
+this system level configuration. The Git installation location can be configured on the
+Team > Git > Configuration preference page's 'System Settings' tab.
+This warning can be switched off on the Team > Git > Confirmations and Warnings preference page.
+
+!ENTRY org.eclipse.e4.ui.workbench 4 0 2016-04-18 17:49:56.564
+!MESSAGE Error setting focus to : org.eclipse.e4.ui.model.application.ui.basic.impl.PartImpl AirportRouteMarker.java
+!STACK 0
+org.eclipse.swt.SWTException: Widget is disposed
+	at org.eclipse.swt.SWT.error(SWT.java:4441)
+	at org.eclipse.swt.SWT.error(SWT.java:4356)
+	at org.eclipse.swt.SWT.error(SWT.java:4327)
+	at org.eclipse.swt.widgets.Widget.error(Widget.java:476)
+	at org.eclipse.swt.widgets.Widget.checkWidget(Widget.java:348)
+	at org.eclipse.swt.widgets.Control.setFocus(Control.java:3320)
+	at org.eclipse.swt.widgets.Composite.setFocus(Composite.java:1039)
+	at org.eclipse.swt.widgets.Composite.setFocus(Composite.java:1039)
+	at org.eclipse.ui.texteditor.StatusTextEditor.setFocus(StatusTextEditor.java:120)
+	at org.eclipse.jdt.internal.ui.javaeditor.JavaEditor.setFocus(JavaEditor.java:2389)
+	at org.eclipse.ui.internal.e4.compatibility.CompatibilityPart.delegateSetFocus(CompatibilityPart.java:190)
+	at sun.reflect.GeneratedMethodAccessor32.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.eclipse.e4.core.internal.di.MethodRequestor.execute(MethodRequestor.java:55)
+	at org.eclipse.e4.core.internal.di.InjectorImpl.invokeUsingClass(InjectorImpl.java:247)
+	at org.eclipse.e4.core.internal.di.InjectorImpl.invokeUsingClass(InjectorImpl.java:253)
+	at org.eclipse.e4.core.internal.di.InjectorImpl.invoke(InjectorImpl.java:225)
+	at org.eclipse.e4.core.contexts.ContextInjectionFactory.invoke(ContextInjectionFactory.java:107)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.focusGui(PartRenderingEngine.java:795)
+	at org.eclipse.e4.ui.workbench.renderers.swt.ContributedPartRenderer$2.setFocus(ContributedPartRenderer.java:100)
+	at org.eclipse.swt.custom.CTabItem.setFocus(CTabItem.java:332)
+	at org.eclipse.swt.custom.CTabFolder.setFocus(CTabFolder.java:2555)
+	at org.eclipse.swt.widgets.Control.fixFocus(Control.java:1052)
+	at org.eclipse.swt.widgets.Control.setVisible(Control.java:3818)
+	at org.eclipse.swt.custom.CTabFolder.setSelection(CTabFolder.java:3098)
+	at org.eclipse.swt.custom.CTabFolder.setSelection(CTabFolder.java:3106)
+	at org.eclipse.swt.custom.CTabFolder.onMouse(CTabFolder.java:1794)
+	at org.eclipse.swt.custom.CTabFolder$1.handleEvent(CTabFolder.java:283)
+	at org.eclipse.swt.widgets.EventTable.sendEvent(EventTable.java:84)
+	at org.eclipse.swt.widgets.Display.sendEvent(Display.java:4353)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1061)
+	at org.eclipse.swt.widgets.Display.runDeferredEvents(Display.java:4172)
+	at org.eclipse.swt.widgets.Display.readAndDispatch(Display.java:3761)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$9.run(PartRenderingEngine.java:1151)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:332)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.run(PartRenderingEngine.java:1032)
+	at org.eclipse.e4.ui.internal.workbench.E4Workbench.createAndRunUI(E4Workbench.java:148)
+	at org.eclipse.ui.internal.Workbench$5.run(Workbench.java:636)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:332)
+	at org.eclipse.ui.internal.Workbench.createAndRunWorkbench(Workbench.java:579)
+	at org.eclipse.ui.PlatformUI.createAndRunWorkbench(PlatformUI.java:150)
+	at org.eclipse.ui.internal.ide.application.IDEApplication.start(IDEApplication.java:135)
+	at org.eclipse.equinox.internal.app.EclipseAppHandle.run(EclipseAppHandle.java:196)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.runApplication(EclipseAppLauncher.java:134)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.start(EclipseAppLauncher.java:104)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:382)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:236)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.eclipse.equinox.launcher.Main.invokeFramework(Main.java:648)
+	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:603)
+	at org.eclipse.equinox.launcher.Main.run(Main.java:1465)
+!SESSION 2016-04-21 10:42:00.443 -----------------------------------------------
+eclipse.buildId=4.4.0.I20140606-1215
+java.version=1.8.0_45
+java.vendor=Oracle Corporation
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=en_IN
+Framework arguments:  -product org.eclipse.epp.package.java.product
+Command-line arguments:  -os win32 -ws win32 -arch x86_64 -product org.eclipse.epp.package.java.product
+
+!ENTRY org.eclipse.egit.ui 2 0 2016-04-21 10:42:16.273
+!MESSAGE Warning: EGit couldn't detect the installation path "gitPrefix" of native Git. Hence EGit can't respect system level
+Git settings which might be configured in ${gitPrefix}/etc/gitconfig under the native Git installation directory.
+The most important of these settings is core.autocrlf. Git for Windows by default sets this parameter to true in
+this system level configuration. The Git installation location can be configured on the
+Team > Git > Configuration preference page's 'System Settings' tab.
+This warning can be switched off on the Team > Git > Confirmations and Warnings preference page.
