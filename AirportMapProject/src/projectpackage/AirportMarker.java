@@ -21,7 +21,6 @@ public class AirportMarker extends SimplePointMarker{
 	public void setIcon(PImage temp)
 	{
 		img = temp;
-		img.resize(5,5);
 	}
 	
 	public void setMap(UnfoldingMap map1)
@@ -45,14 +44,13 @@ public class AirportMarker extends SimplePointMarker{
 	
 	public void drawMarker(PGraphics pg, float x, float y) {
 		pg.fill(11);
-		//pg.ellipse(x,y,radius,radius);
 		
 		zoomLevel = map.getZoomLevel();
 		
 		radius = (zoomLevel*2) + 5;
 		
 		img.resize(radius, radius);
-		pg.image(img, x-radius/2, y - radius/2);
+		pg.image(img, x - radius/2, y - radius/2);
 		if (selected) {
 			showTitle(pg, x, y);
 		}

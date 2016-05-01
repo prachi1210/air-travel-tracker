@@ -22,39 +22,44 @@ import processing.core.PImage;
 import controlP5.*;
 
 public class AirportMap extends PApplet {
-	public int xbase=250,ybase=100;
+	public int xbase=50,ybase=150;
 	UnfoldingMap map;
 	private List<Marker> airportList;
 	PImage airicon;
 	List<Marker> routeList;
 	private String stringsource;
-	private String stringdest;
 		
 	private AirportMarker lastSelected;
 	HashMap<Integer, AirportMarker> keytoairport = new HashMap<Integer, AirportMarker>();
 	
 	ControlP5 cp5;
+	int mygray = color(100,100,100);
+	int myyellow = color(213,213,63);
 	
 	public void setup() {
 		// setting up PApplet
-		size(1920,1080,P2D);
+		size(1800,900,P2D);
 		
 		cp5 = new ControlP5(this);
 		
-		cp5.addTextfield("SOURCE")
-	     .setPosition(25,ybase)
-	     .setSize(200,50)
+		cp5.addTextfield("Search for Airport using unique OpenFlights ID")
+	     .setPosition(xbase,ybase)
+	     .setSize(300,50)
 	     .setFocus(true)
+	     .setFont(createFont("calibri",20))
+		 .setColorBackground(myyellow)
+		 .setColor(color(0,0,0))
 	     ;
-		
-		cp5.addTextfield("DESTINATION")
-	     .setPosition(25,ybase+100)
-	     .setSize(200,50)
-	     .setFocus(true)
+	     
+	     cp5.addBang("clear")
+	     .setPosition(xbase+400,ybase)
+	     .setSize(80,50)
+	     .getCaptionLabel().align(ControlP5.CENTER, ControlP5.CENTER)
+	     .setColor(myyellow);
 	     ;
 		
 		// setting up map and default events
-		map = new UnfoldingMap(this, xbase, ybase, 1000, 880, new Google.GoogleMapProvider());
+		map = new UnfoldingMap(this, 750, 150, 900, 700, new Google.GoogleMapProvider());
 		MapUtils.createDefaultEventDispatcher(this, map);
 		
 		// get features from airport data
@@ -121,20 +126,21 @@ public class AirportMap extends PApplet {
 	    map.addMarkers(airportList);
 	}
 	
-	AirportMarker SourceAirportforBox, DestAirportforBox;
-	public int intsource, intdest;
-	String AirportName, CityName, CountryName, Altitude,AirportCode;
+	AirportMarker SourceAirportforBox,tempDest;
+	public int intsource, intdest, flightcount;
+	String AirportName, CityName, CountryName, Altitude,AirportCode, deststring;
+	Boolean airportnotfound;
 	
 	public void draw() {
+		
 		background(100,100,100);
 		
 		drawProjectTitle();
+		HelpBox();
 		
 		map.draw();
-		drawZoomButtons();
 		
-		stringsource = cp5.get(Textfield.class,"SOURCE").getText();
-		stringdest = cp5.get(Textfield.class,"DESTINATION").getText();
+		stringsource = cp5.get(Textfield.class,"Search for Airport using unique OpenFlights ID").getText();
 		
 		try
 		{
@@ -147,111 +153,125 @@ public class AirportMap extends PApplet {
 		
 		try
 		{
-			intdest = Integer.parseInt(stringdest);
-		}
-		catch(Exception e)
-		{
-			intdest = 0;
-		}
-		
-		try
-		{
 			SourceAirportforBox = keytoairport.get(intsource);
+			airportnotfound = false;
 		}
 		catch(Exception e)
 		{
 			SourceAirportforBox = null;
+			airportnotfound = true;
+		}
+		
+		DrawBox();
+	
+		if(keytoairport.containsKey(intsource))
+		{
+			for(Marker airport : airportList)
+			{
+				airport.setHidden(true);
+			}
+		}
+		else
+		{
+			//System.out.println("A");
+			
+			for(Marker airport : airportList)
+			{
+				airport.setHidden(false);
+			}
 		}
 		
 		try
 		{
-			DestAirportforBox = keytoairport.get(intdest);
+		     SourceAirportforBox.setHidden(false);
 		}
-		catch(Exception e)
+		catch( Exception e )
 		{
-			DestAirportforBox = null;
 		}
 		
-		DrawBoxesWithSourceAndDestination();
-		
-		for(Marker route : routeList)
+		flightcount = 0;
+			
+			for(Marker route : routeList)
 		{
-			if(route.getProperty("source").equals(stringsource) && route.getProperty("destination").equals(stringdest))
+			if(route.getProperty("source").equals(stringsource))
 			{
+				flightcount++;
+				deststring = route.getStringProperty("destination");
+				intdest = Integer.parseInt(deststring);
+				
 				route.setHidden(false);
+				
+				tempDest = keytoairport.get(intdest);
+				tempDest.setHidden(false);
 			}
 			else
 			{
 				route.setHidden(true);
 			}
 		}	
+		
     }
+	
+	public void HelpBox()
+	{
+		//To Do
+		fill(myyellow);
+		String message = "HELP : - Hover over your airport";
+		String message2 = "and find out it's Unique OpenFlights ID";
+		String message3 = "Double-Click or Scroll to zoom in/out";
+		String message4 = "Press R at anytime to reset map's zoom";
+		
+		rect(xbase,ybase+625,400,115,10);
+		textSize(20);
+		fill(0,0,0);
+		text(message,xbase+15,ybase+648);
+		text(message2,xbase+15,ybase+675);
+		text(message3,xbase+15,ybase+702);
+		text(message4,xbase+15,ybase+729);
+	}
 	
 	public void drawProjectTitle()
 	{
+		//To Do
+		fill(0,0,0);
+		textFont(createFont("arial",40));
+		text("World Airport Tracker",50,100);
+	}
+	
+	public void DrawBox()
+	{
+		fill(myyellow);
+		rect(xbase,ybase+100,600,500,10);
+		
 		fill(0,0,0);
 		textSize(30);
-		text("Flights Data",100,50);
-	}
-	
-	public void RouteVisibility()
-	{
-		//To Do : Make hashmap(precompute) to avoid going to all routes
-	}
-	
-	public void DrawBoxesWithSourceAndDestination()
-	{
-		fill(255,255,255);
-		rect(25,ybase+200,200,300,10);
-		rect(25,ybase+550,200,300,10);
+		text("AIRPORT INFORMATION :- ",xbase+15,ybase+150);
 		
-		
-		fill(0,0,0);
-		textSize(15);
-		
+		textSize(20);
 		if(SourceAirportforBox != null)
 		{
 			AirportName = SourceAirportforBox.getName();
 			CityName = SourceAirportforBox.getCity();
 			CountryName = SourceAirportforBox.getCountry();
-			Altitude = "Altitude : " + SourceAirportforBox.getAltitude();
+			Altitude = "Altitude of the airport : " + SourceAirportforBox.getAltitude();
 			AirportCode = "ID : " + SourceAirportforBox.getId();
 			
-			text(AirportCode,30,ybase+230);
-			text(AirportName,30,ybase+280);
-			text(CityName,30,ybase+330);
-			text(CountryName,30,ybase+380);
-			text(Altitude,30,ybase+430);
+			text("OpenFlights "+ AirportCode,xbase+15,ybase+200);
+			text("Airport Name :- " + AirportName,xbase+15,ybase+300);
+			text("City :- " + CityName,xbase+15,ybase+350);
+			text("Country :- " + CountryName,xbase+15,ybase+400);
+			text(Altitude + " metres",xbase+15,ybase+450);
+			text("Flights reaching to "+flightcount+" destinations!",xbase+15,ybase+500);
 		}
-		
-		
-		if(DestAirportforBox != null)
+		else
 		{
-			AirportName = DestAirportforBox.getName();
-			CityName = DestAirportforBox.getCity();
-			CountryName = DestAirportforBox.getCountry();
-			Altitude = "Altitude : " + DestAirportforBox.getAltitude();
-			AirportCode = "ID : " + DestAirportforBox.getId();
-			
-			text(AirportCode,30,ybase+580);
-			text(AirportName,30,ybase+630);
-			text(CityName,30,ybase+680);
-			text(CountryName,30,ybase+730);
-			text(Altitude,30,ybase+780);
+			text("Valid search has not been made",xbase+15,ybase+200);
 		}
 	}
 	
-	public void drawZoomButtons()
-	{
-		//To Do  
-		
-	}
-	
-	//Only for sketch purpose. No real purpose.
-	public void mouseReleased()
-	{
-		System.out.println(mouseX + " " + mouseY);
-	}
+	public void clear() {
+		  cp5.get(Textfield.class,"Search for Airport using unique OpenFlights ID").clear();
+		}
 
 	public void mouseMoved()
 	{
@@ -263,6 +283,15 @@ public class AirportMap extends PApplet {
 		
 		selectMarkerIfHover(airportList);
 		//loop();
+	}
+	
+	public void keyPressed()
+	{
+		if(key == 'r')
+		{
+			map.zoomToLevel(1);
+		}
+		
 	}
 	
 	private void selectMarkerIfHover(List<Marker> markers)
