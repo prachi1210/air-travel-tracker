@@ -22,7 +22,11 @@ import processing.core.PImage;
 import controlP5.*;
 
 public class AirportMap extends PApplet {
-	public int xbase=50,ybase=150;
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
+	public int xbase=30,ybase=80;
 	UnfoldingMap map;
 	private List<Marker> airportList;
 	PImage airicon;
@@ -38,13 +42,13 @@ public class AirportMap extends PApplet {
 	
 	public void setup() {
 		// setting up PApplet
-		size(1800,900,P2D);
+		size(1000,500,P2D);
 		
 		cp5 = new ControlP5(this);
 		
 		cp5.addTextfield("Search for Airport using unique OpenFlights ID")
 	     .setPosition(xbase,ybase)
-	     .setSize(300,50)
+	     .setSize(150,30)
 	     .setFocus(true)
 	     .setFont(createFont("calibri",20))
 		 .setColorBackground(myyellow)
@@ -52,14 +56,14 @@ public class AirportMap extends PApplet {
 	     ;
 	     
 	     cp5.addBang("clear")
-	     .setPosition(xbase+400,ybase)
-	     .setSize(80,50)
+	     .setPosition(xbase+200,ybase)
+	     .setSize(40,30)
 	     .getCaptionLabel().align(ControlP5.CENTER, ControlP5.CENTER)
 	     .setColor(myyellow);
 	     ;
 		
 		// setting up map and default events
-		map = new UnfoldingMap(this, 750, 150, 900, 700, new Google.GoogleMapProvider());
+		map = new UnfoldingMap(this, 450, 80, 500, 400, new Google.GoogleMapProvider());
 		MapUtils.createDefaultEventDispatcher(this, map);
 		
 		// get features from airport data
@@ -221,33 +225,33 @@ public class AirportMap extends PApplet {
 		String message3 = "Double-Click or Scroll to zoom in/out";
 		String message4 = "Press R at anytime to reset map's zoom";
 		
-		rect(xbase,ybase+625,400,115,10);
-		textSize(20);
+		rect(xbase,ybase+325,250,75,10);
+		textSize(12);
 		fill(0,0,0);
-		text(message,xbase+15,ybase+648);
-		text(message2,xbase+15,ybase+675);
-		text(message3,xbase+15,ybase+702);
-		text(message4,xbase+15,ybase+729);
+		text(message,xbase+15,ybase+350);
+		text(message2,xbase+15,ybase+365);
+		text(message3,xbase+15,ybase+380);
+		text(message4,xbase+15,ybase+395);
 	}
 	
 	public void drawProjectTitle()
 	{
 		//To Do
 		fill(0,0,0);
-		textFont(createFont("arial",40));
-		text("World Airport Tracker",50,100);
+		textFont(createFont("arial",30));
+		text("World Airport Tracker",275,50);
 	}
 	
 	public void DrawBox()
 	{
 		fill(myyellow);
-		rect(xbase,ybase+100,600,500,10);
+		rect(xbase,ybase+50,250,250,10);
 		
 		fill(0,0,0);
-		textSize(30);
-		text("AIRPORT INFORMATION :- ",xbase+15,ybase+150);
+		textSize(15);
+		text("AIRPORT INFORMATION :- ",xbase+15,ybase+75);
 		
-		textSize(20);
+		textSize(12);
 		if(SourceAirportforBox != null)
 		{
 			AirportName = SourceAirportforBox.getName();
@@ -256,12 +260,12 @@ public class AirportMap extends PApplet {
 			Altitude = "Altitude of the airport : " + SourceAirportforBox.getAltitude();
 			AirportCode = "ID : " + SourceAirportforBox.getId();
 			
-			text("OpenFlights "+ AirportCode,xbase+15,ybase+200);
-			text("Airport Name :- " + AirportName,xbase+15,ybase+300);
-			text("City :- " + CityName,xbase+15,ybase+350);
-			text("Country :- " + CountryName,xbase+15,ybase+400);
-			text(Altitude + " metres",xbase+15,ybase+450);
-			text("Flights reaching to "+flightcount+" destinations!",xbase+15,ybase+500);
+			text("OpenFlights "+ AirportCode,xbase+15,ybase+100);
+			text("Airport Name :- " + AirportName,xbase+15,ybase+120);
+			text("City :- " + CityName,xbase+15,ybase+140);
+			text("Country :- " + CountryName,xbase+15,ybase+160);
+			text(Altitude + " metres",xbase+15,ybase+180);
+			text("Flights reaching to "+flightcount+" destinations!",xbase+15,ybase+200);
 		}
 		else
 		{

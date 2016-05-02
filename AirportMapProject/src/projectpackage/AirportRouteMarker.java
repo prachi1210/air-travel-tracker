@@ -8,7 +8,7 @@ import de.fhpotsdam.unfolding.utils.MapPosition;
 import de.fhpotsdam.unfolding.utils.ScreenPosition;
 
 public class AirportRouteMarker extends SimpleLinesMarker{
-	public int xbase=750,ybase=150;
+	public int xbase=450,ybase=80;
 	private int SourceCode,DestCode;
 	UnfoldingMap map;
 	private AirportMarker source = null;
