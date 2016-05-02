@@ -1,5 +1,8 @@
 *.class
 
+controlP5/*
+UnfoldingMaps and Processing/*
+
 # Mobile Tools for Java (J2ME)
 .mtj.tmp/
 
