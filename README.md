@@ -27,7 +27,14 @@ Air Travel Tracker is an interactive map (with basic interactions such as zoom a
       
 
 #### License:
-MIT
+[MIT](https://github.com/prachi1210/air-travel-tracker/blob/master/LICENSE)
+
+#### Contact us:
+Feel free to contact us for any support, query, suggestion or even drop a Hi!
+   
+   [Prachi Manchanda](mailto:prachi121096@gmail.com)
+   
+   [Raj Singh](mailto:raj1996@gmail.com)
 
 
 
